@@ -52,6 +52,16 @@ aTags[3].textContent = siteContent.nav["nav-item-4"]
 aTags[4].textContent = siteContent.nav["nav-item-5"]
 aTags[5].textContent = siteContent.nav["nav-item-6"]
 
+aTags[0].style.color = 'green';
+aTags[1].style.color = 'green';
+aTags[2].style.color = 'green';
+aTags[3].style.color = 'green';
+aTags[4].style.color = 'green';
+aTags[5].style.color = 'green';
+
+// nav.appendChild(childElement)
+// nav.prepend(childElement)
+
 let logo = document.getElementById("logo-img"); //changing value of the tag
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
@@ -76,17 +86,35 @@ h4Array[2].textContent = siteContent["main-content"]["services-h4"]
 h4Array[3].textContent = siteContent["main-content"]["product-h4"]
 h4Array[4].textContent = siteContent["main-content"]["vision-h4"]
 
-//main-content p's by All because there are multiple
 let mainContentArray = document.querySelectorAll('.main-content p');
 console.log(mainContentArray[0])
 mainContentArray[0].textContent = siteContent["main-content"]["features-content"]
 mainContentArray[1].textContent = siteContent["main-content"]["about-content"]
-mainContentArray[2].textContent = siteContent["main-content"]["services-content"]
-mainContentArray[3].textContent = siteContent["main-content"]["product-content"]
-mainContentArray[4].textContent = siteContent["main-content"]["vision-content"]
 
+let middle = document.getElementById("middle-img");
+middle.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
+mainContentArray[2].textContent = siteContent["contact"]["services-content"]
+mainContentArray[3].textContent = siteContent["contact"]["product-content"]
+mainContentArray[4].textContent = siteContent["contact"]["vision-content"]
 
+//contact
+let h4contact = document.querySelector('.contact h4');
+console.log(h4contact)
+h4contact.textContent = siteContent["contact"]["contact-h4"]
+let contactArray = document.querySelectorAll('.contact p');
+console.log(contactArray[0])
+contactArray[0].textContent = siteContent["contact"]["address"]
+contactArray[1].textContent = siteContent["contact"]["phone"]
+contactArray[2].textContent = siteContent["contact"]["email"]
+
+//footer
+let footerP = document.querySelector('footer p')
+console.log(footerP)
+footerP.textContent = siteContent["footer"]["copyright"]
+
+// "footer": {
+//   "copyright" : "Copyright Great Idea! 2018"
 
 
 
@@ -99,8 +127,6 @@ mainContentArray[4].textContent = siteContent["main-content"]["vision-content"]
 // console.log(h4about)
 // // h4about.textContent = siteContent["main-content"]["about-h4"]
 
-let middle = document.getElementById("middle-img");
-middle.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
 
 
