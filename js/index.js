@@ -38,5 +38,100 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
+// let logo = document.getElementById("logo-img"); //changing value of the tag
+// logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+//nav
+let aTags = document.getElementsByTagName('a');
+console.log(aTags);
+aTags[0].textContent = siteContent.nav["nav-item-1"] // providing the string 
+aTags[1].textContent = siteContent.nav["nav-item-2"]
+aTags[2].textContent = siteContent.nav["nav-item-3"]
+aTags[3].textContent = siteContent.nav["nav-item-4"]
+aTags[4].textContent = siteContent.nav["nav-item-5"]
+aTags[5].textContent = siteContent.nav["nav-item-6"]
+
+aTags[0].style.color = 'green';
+aTags[1].style.color = 'green';
+aTags[2].style.color = 'green';
+aTags[3].style.color = 'green';
+aTags[4].style.color = 'green';
+aTags[5].style.color = 'green';
+
+// nav.appendChild(childElement)
+// nav.prepend(childElement)
+
+let logo = document.getElementById("logo-img"); //changing value of the tag
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//cta
+let theH1 = document.getElementsByTagName('h1'); // because I'm using get Elements...
+console.log(theH1); // its returned in an array object
+theH1[0].textContent = siteContent.cta["h1"]
+
+let theButton = document.getElementsByTagName('button');  
+console.log(theButton);
+theButton[0].textContent = siteContent["cta"]["button"];
+
+let cta = document.getElementById("cta-img");
+cta.setAttribute('src', siteContent["cta"]["img-src"])
+
+//main-content h4's by All because there are multiple
+let h4Array = document.querySelectorAll('.main-content h4');
+console.log(h4Array[0])
+h4Array[0].textContent = siteContent["main-content"]["features-h4"]
+h4Array[1].textContent = siteContent["main-content"]["about-h4"]
+h4Array[2].textContent = siteContent["main-content"]["services-h4"]
+h4Array[3].textContent = siteContent["main-content"]["product-h4"]
+h4Array[4].textContent = siteContent["main-content"]["vision-h4"]
+
+let mainContentArray = document.querySelectorAll('.main-content p');
+console.log(mainContentArray[0])
+mainContentArray[0].textContent = siteContent["main-content"]["features-content"]
+mainContentArray[1].textContent = siteContent["main-content"]["about-content"]
+
+let middle = document.getElementById("middle-img");
+middle.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+let subContentArray = document.querySelectorAll('.main-content p')
+subContentArray[2].textContent = siteContent["main-content"]["services-content"]
+subContentArray[3].textContent = siteContent["main-content"]["product-content"]
+subContentArray[4].textContent = siteContent["main-content"]["vision-content"]
+console.log(subContentArray)
+
+//contact
+let h4contact = document.querySelector('.contact h4');
+console.log(h4contact)
+h4contact.textContent = siteContent["contact"]["contact-h4"]
+let contactArray = document.querySelectorAll('.contact p');
+console.log(contactArray[0])
+contactArray[0].textContent = siteContent["contact"]["address"]
+contactArray[1].textContent = siteContent["contact"]["phone"]
+contactArray[2].textContent = siteContent["contact"]["email"]
+
+//footer
+let footerP = document.querySelector('footer p')
+console.log(footerP)
+footerP.textContent = siteContent["footer"]["copyright"]
+
+// "footer": {
+//   "copyright" : "Copyright Great Idea! 2018"
+
+
+
+
+// let h4content = document.querySelector('.text-content p');
+// console.log(h4content)
+// h4content.textContent = siteContent["main-content"]["features-content"]
+
+// let h4about = document.querySelector('.text-content h4:last-child');
+// console.log(h4about)
+// // h4about.textContent = siteContent["main-content"]["about-h4"]
+
+
+
+
+
+
+
