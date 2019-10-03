@@ -94,9 +94,11 @@ mainContentArray[1].textContent = siteContent["main-content"]["about-content"]
 let middle = document.getElementById("middle-img");
 middle.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
-mainContentArray[2].textContent = siteContent["contact"]["services-content"]
-mainContentArray[3].textContent = siteContent["contact"]["product-content"]
-mainContentArray[4].textContent = siteContent["contact"]["vision-content"]
+let subContentArray = document.querySelectorAll('.main-content p')
+subContentArray[2].textContent = siteContent["main-content"]["services-content"]
+subContentArray[3].textContent = siteContent["main-content"]["product-content"]
+subContentArray[4].textContent = siteContent["main-content"]["vision-content"]
+console.log(subContentArray)
 
 //contact
 let h4contact = document.querySelector('.contact h4');
